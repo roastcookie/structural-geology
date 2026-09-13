@@ -396,7 +396,7 @@ const $=id=>document.getElementById(id), C=$("canvas"),ctx=C.getContext("2d"), M
 const st={
  tab:"plane",strike:30,dipDir:120,dip:35,lineMaster:"rake",trend:145,plunge:25,rake:35,rakeEnd:0,
  repr:"graphic",showPlane:true,showStrike:true,showDipDir:true,showDipAngle:true,showLine:true,showTrend:true,showPlunge:true,showRakeDir:true,showRakeAngle:true,showProj:true,showLabel:true,tool:"view",sceneMode:"geo",sectionAz:90,measureYaw:55,measurePitch:0,measureRoll:18,measureClin:12,measureStep:"dipdir",measureControl:"horizontal",measureFollow:true,measureYawCenter:30,recordedStrike:null,recordedDipDir:null,recordedDip:null,
- yaw:-42*Math.PI/180,pitch:25*Math.PI/180,dist:13
+ yaw:138*Math.PI/180,pitch:25*Math.PI/180,dist:13
 };
 let W=0,H=0,dpr=1,drag=false,lastX=0,lastY=0,challenge=null,calcQuestion=null;
 
@@ -481,7 +481,7 @@ function arrow3(o,v,L,color,label){
 function arc3(h,ang,R,color){let pts=[];for(let i=0;i<=34;i++){let a=rad(ang)*i/34;pts.push(V(h.x*R*Math.cos(a),-R*Math.sin(a),h.z*R*Math.cos(a)))}path3(pts,color,3)}
 function grid(){
  let s=7;for(let i=-s;i<=s;i++){let c=i===0?"#385774":"#1c3348",w=i===0?1.3:.7;path3([V(i,0,-s),V(i,0,s)],c,w,[],.7);path3([V(-s,0,i),V(s,0,i)],c,w,[],.7)}
- text3(V(0,.05,7.35),"N","#eaf8ff",14);text3(V(7.35,.05,0),"E","#eaf8ff",14);text3(V(0,.05,-7.35),"S","#eaf8ff",14);text3(V(-7.35,.05,0),"W","#eaf8ff",14);
+ text3(V(0,.05,7.35),"N","#eaf8ff",14);text3(V(7.35,.05,0),"W","#eaf8ff",14);text3(V(0,.05,-7.35),"S","#eaf8ff",14);text3(V(-7.35,.05,0),"E","#eaf8ff",14);
 }
 
 const rockColors=["#78533e","#a7744d","#bf8b5d","#8d6045","#c59a6d","#6f4b39","#b27b52","#d0aa7a"];
